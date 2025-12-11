@@ -8,6 +8,8 @@ android {
     namespace = "com.uth.elearning.elearningproject"
     compileSdk = 36
 
+
+
     defaultConfig {
         applicationId = "com.uth.elearning.elearningproject"
         minSdk = 24
@@ -36,6 +38,15 @@ android {
     }
     buildFeatures {
         compose = true
+    }
+
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            // Đổi "ElearningApp" thành tên bạn muốn
+            // ${variant.name} sẽ tự động điền là "debug" hoặc "release"
+            outputFileName = "Mathematics code in Kotlin from Scratch.apk"
+        }
     }
 }
 
